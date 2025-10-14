@@ -18,6 +18,7 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    justify-content: center; /* This centers the menu items on desktop */
 }
 
 nav ul li {
@@ -69,4 +70,68 @@ a:hover i {
     padding-left: 10px;
     padding-right: 10px;
     color: #ffffff;
+}
+
+
+
+
+
+
+
+/* Hamburger icon */
+.menu-toggle {
+    display: none; /* Hide by default */
+    font-size: 30px; /* Icon size */
+    cursor: pointer; /* Makes it clickable */
+    color: white; /* Set icon color */
+}
+
+/* Style for menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+/* For mobile screens: hide the menu and show the hamburger icon */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #a9d6e5; /* Light blue background for the dropdown menu */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Spacing between menu items */
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    /* When the menu is open, show it */
+    nav ul.open {
+        display: block; /* Show the menu */
+    }
+}
+
+.pdf-container {
+    width: 100%; /* Makes it take the full width */
+    max-width: 100%; /* Ensures it doesn't exceed the container's width */
+    height: 500px; /* Fixed height for desktop */
+    overflow: hidden; /* Hides anything that goes beyond the container */
+    position: relative; /* This is to ensure we can adjust the embedded PDF's size */
+}
+
+.pdf-container embed {
+    width: 100%; /* Make the embed take up the full width of its container */
+    height: 100%; /* Make the embed fill the container's height */
 }

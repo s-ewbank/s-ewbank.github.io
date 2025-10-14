@@ -24,10 +24,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
+
+
 <body>
+
     <header>
         <h1>Sedona Ewbank</h1>
         <nav>
+            <!-- Hamburger icon for mobile -->
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <!-- Menu list -->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cv.html">CV</a></li>
@@ -38,6 +44,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <div class="content">
             <img src="imgs/sedona-ewbank.jpeg" alt="Sedona Ewbank" width="300" style="border-radius: 50%;">
@@ -56,5 +63,12 @@
     </p>
         <p>&copy; 2025 Sedona Ewbank</p>
     </footer>
+
+    <script>
+    function toggleMenu() {
+        const menu = document.querySelector('nav ul');
+        menu.classList.toggle('open'); // Toggle the 'open' class
+    }
+    </script>
 </body>
 </html>
