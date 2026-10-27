@@ -135,20 +135,23 @@ a:hover i {
 
 .pdf-button {
     color: var(--text-color-2);
-    background-color: var(--nav-bg-color);
+    background-color: var(--header-color);
     text-decoration: none;
     font-family: var(--main-font);
     font-weight: 600;
     transition: all 0.3s ease;
     padding: 12px 20px;
     border-radius: 5px;
+    border: 1px solid var(--nav-border-color);
     font-size: 1rem;
     display: inline-block;
 }
 
 .pdf-button:hover {
-    background-color: var(--bg-color);
-    color: var(--header-text-color);
+    background-color: var(--nav-hover-color);
+    color: var(--nav-text-hover-color);
+    border: 1px solid var(--nav-border-hover-color);
+    box-shadow: 0 4px 15px var(--shadow-color);
 }
 
 /* Mobile navigation */
@@ -159,19 +162,21 @@ a:hover i {
 
     nav ul {
         display: none;
-        flex-direction: column;
-        align-items: flex-start;
         width: 100%;
         padding: 10px 0;
         background-color: var(--header-color);
     }
 
-    nav ul li {
-        margin: 10px 0;
-    }
-
     nav ul.open {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
     }
 
     nav a {
